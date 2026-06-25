@@ -14,8 +14,8 @@ function downloadCV() {
 }
 
 const stats = [
-  { label: "Projects Delivered", value: 50, suffix: "+" },
-  { label: "Years Experience", value: 5, suffix: "+" },
+  { label: "Projects Delivered", value: 5, suffix: "+" },
+  { label: "Years Experience", value: 1, suffix: "+" },
   { label: "Technologies", value: 20, suffix: "+" },
   { label: "Happy Clients", value: 30, suffix: "+" },
 ];
