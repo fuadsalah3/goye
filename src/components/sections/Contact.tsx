@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import GoldButton from "@/components/ui/GoldButton";
+import { socialLinks } from "@/lib/constants";
 
 export default function Contact() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -62,14 +63,50 @@ export default function Contact() {
                 Email
               </p>
               <a
-                href="mailto:hello@goye.dev"
                 className="inline-flex items-center gap-2 text-lg text-[var(--text-primary)] hover:text-[var(--accent-gold)] transition-colors"
               >
-                hello@goye.dev
+                fuadnesredinhiyar@gmail.com
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
+            </div>
+
+            <div>
+              <p className="text-sm tracking-widest uppercase text-[var(--text-secondary)] mb-4">
+                Social
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { label: "GitHub", href: socialLinks.github, icon: "GH" },
+                  { label: "Telegram", href: socialLinks.telegram, icon: "TG" },
+                  { label: "Instagram", href: socialLinks.instagram, icon: "IG" },
+                ].map((s) => (
+                  <motion.a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -4, scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="group relative px-5 py-3 rounded-xl glass border border-[var(--card-border)] hover:border-[var(--accent-gold)]/30 transition-all duration-300"
+                  >
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[var(--accent-gold)]/0 via-transparent to-[var(--accent-gold)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative z-10 flex items-center gap-3">
+                      <span className="font-mono text-sm font-bold text-[var(--accent-gold)]">
+                        {s.icon}
+                      </span>
+                      <span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors">
+                        {s.label}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-0 left-3 right-3 h-px bg-gradient-to-r from-transparent via-[var(--accent-gold)]/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
 

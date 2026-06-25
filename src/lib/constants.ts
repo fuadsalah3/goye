@@ -1,7 +1,7 @@
 export const socialLinks = {
-  github: "https://github.com/goye",
-  linkedin: "https://linkedin.com/in/goye",
-  twitter: "https://twitter.com/goye",
+  github: "https://github.com/fuadsalah3",
+  telegram: "https://t.me/fuyesalah",
+  instagram: "https://www.instagram.com/kiyar_fam",
 };
 
 export const skills = [
