@@ -13,7 +13,7 @@ export default function MarqueeTicker() {
             key={`${skill}-${i}`}
             className="inline-flex items-center gap-3 text-sm font-medium tracking-widest uppercase text-[var(--text-secondary)]"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] animate-pulse-glow" />
             {skill}
           </span>
         ))}

@@ -42,7 +42,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
         <button
           onClick={() => scrollTo("#hero")}
-          className="text-xl md:text-2xl font-bold tracking-[0.2em] text-[var(--accent-gold)]"
+          className="text-xl md:text-2xl font-black tracking-[0.2em] gradient-text"
         >
           GOYE
         </button>

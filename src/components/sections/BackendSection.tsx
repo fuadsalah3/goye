@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const nodes = [
-  { id: "client", label: "Client", x: 10, y: 50, color: "#D4AF37" },
+  { id: "client", label: "Client", x: 10, y: 50, color: "#22d3ee" },
   { id: "cdn", label: "CDN", x: 25, y: 25, color: "#6366F1" },
   { id: "api", label: "API Gateway", x: 40, y: 50, color: "#10B981" },
   { id: "micro", label: "Microservices", x: 60, y: 30, color: "#F59E0B" },
@@ -79,7 +79,7 @@ export default function BackendSection() {
                     y1={f.y}
                     x2={t.x}
                     y2={t.y}
-                    stroke="rgba(212, 175, 55, 0.2)"
+                    stroke="rgba(34, 211, 238, 0.3)"
                     strokeWidth="0.3"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}

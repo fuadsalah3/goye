@@ -8,14 +8,16 @@ import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import MarqueeTicker from "@/components/effects/MarqueeTicker";
 import ParticleField from "@/components/effects/ParticleField";
+import FloatingOrbs from "@/components/effects/FloatingOrbs";
 
 export default function Home() {
   return (
     <>
       <ParticleField />
+      <FloatingOrbs />
       <Hero />
-      <About />
       <MarqueeTicker />
+      <About />
       <Services />
       <TechStack />
       <Projects />

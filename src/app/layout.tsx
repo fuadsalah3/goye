@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/effects/ScrollProgress";
 import CustomCursor from "@/components/effects/CustomCursor";
 import LoadingScreen from "@/components/layout/LoadingScreen";
+import FaviconTheme from "@/components/effects/FaviconTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,30 +20,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Goye — Full-Stack Architect & 3D Engineer",
+  title: "Goye — Full-Stack Architect & Engineer",
   description:
-    "Goye (Fuad Nesredin) builds high-performance, luxury digital experiences at the intersection of backend engineering and frontend artistry.",
+    "Goye (Fuad Nesredin) builds high-performance digital experiences at the intersection of backend engineering and frontend artistry.",
   keywords: [
     "full-stack developer",
     "React",
     "Next.js",
-    "Three.js",
     "PostgreSQL",
     "MongoDB",
     "portfolio",
     "Goye",
     "Fuad Nesredin",
   ],
+  icons: {
+    icon: "/favicon-dark.svg",
+  },
   openGraph: {
     title: "Goye — Full-Stack Architect",
-    description: "Luxury 3D portfolio of Fuad Nesredin. Backend logic meets frontend artistry.",
+    description: "Portfolio of Fuad Nesredin. Backend logic meets frontend artistry.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Goye — Full-Stack Architect",
-    description: "Luxury 3D portfolio of Fuad Nesredin. Backend logic meets frontend artistry.",
+    description: "Portfolio of Fuad Nesredin. Backend logic meets frontend artistry.",
   },
 };
 
@@ -55,6 +58,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`} data-theme="dark">
       <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500">
         <ThemeProvider>
+          <FaviconTheme />
           <LoadingScreen />
           <ScrollProgress />
           <CustomCursor />

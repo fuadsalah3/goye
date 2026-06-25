@@ -53,13 +53,13 @@ export default function CustomCursor() {
 
       ctx.beginPath();
       ctx.arc(pos.current.x, pos.current.y, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+      ctx.strokeStyle = `rgba(34, 211, 238, ${alpha})`;
       ctx.lineWidth = hovered.current ? 2 : 1.5;
       ctx.stroke();
 
       ctx.beginPath();
       ctx.arc(pos.current.x, pos.current.y, 2, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(212, 175, 55, 0.4)";
+      ctx.fillStyle = "rgba(34, 211, 238, 0.4)";
       ctx.fill();
 
       animId = requestAnimationFrame(draw);
