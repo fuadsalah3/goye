@@ -4,20 +4,13 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, useSpring } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-async function downloadCV() {
-  try {
-    const res = await fetch("/api/cv");
-    if (!res.ok) return;
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Goye_CV.pdf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  } catch {}
+function downloadCV() {
+  const a = document.createElement("a");
+  a.href = "/api/cv";
+  a.download = "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 const stats = [
@@ -117,28 +110,17 @@ export default function About() {
 
           <motion.button
             onClick={downloadCV}
-            whileHover={{ scale: 1.05, x: 4 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-8 inline-flex items-center gap-3 px-6 py-3 rounded-full glass border border-[var(--card-border)] hover:border-[var(--accent-gold)]/30 text-[var(--text-secondary)] hover:text-[var(--accent-gold)] transition-all duration-300 group"
+            className="mt-8 inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#22d3ee] to-[#a78bfa] text-[#030712] font-bold tracking-wide transition-all duration-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <span className="text-sm font-medium tracking-wide">Download CV</span>
+            <span>Download CV</span>
             <motion.span
               animate={{ y: [0, 3, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="text-[var(--accent-gold)]"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7" />
