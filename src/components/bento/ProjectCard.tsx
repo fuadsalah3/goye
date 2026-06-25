@@ -46,17 +46,17 @@ export default function ProjectCard({ title, description, tags, color, size = "s
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-transparent" />
 
       <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[220px]">
-        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[var(--accent-gold)] transition-colors duration-300">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent-gold)] transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-sm text-white/60 mb-4 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+        <p className="text-sm text-[var(--text-secondary)] mb-4 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
           {description}
         </p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider rounded-full bg-white/10 text-white/70 border border-white/10"
+              className="px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider rounded-full bg-[var(--card-bg)] text-[var(--text-secondary)] border border-[var(--card-border)]"
             >
               {tag}
             </span>

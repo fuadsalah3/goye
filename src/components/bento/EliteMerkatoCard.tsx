@@ -57,10 +57,10 @@ export default function EliteMerkatoCard() {
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] animate-gold-pulse" />
               <span className="text-[10px] font-bold tracking-widest uppercase text-[var(--accent-gold)]">Flagship Project</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-3">
               Elite / Merkato Store
             </h3>
-            <p className="text-sm md:text-base text-white/60 max-w-md leading-relaxed">
+            <p className="text-sm md:text-base text-[var(--text-secondary)] max-w-md leading-relaxed">
               A high-performance e-commerce platform serving thousands of concurrent users.
               Built with Next.js, PostgreSQL, and Redis for blazing-fast checkout experiences.
             </p>
@@ -72,7 +72,7 @@ export default function EliteMerkatoCard() {
             {["Next.js", "PostgreSQL", "Redis", "Stripe", "Docker"].map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 text-xs font-medium uppercase tracking-wider rounded-full border border-white/20 text-white/70 bg-white/5"
+                className="px-3 py-1 text-xs font-medium uppercase tracking-wider rounded-full border border-[var(--card-border)] text-[var(--text-secondary)] bg-[var(--card-bg)]"
               >
                 {tag}
               </span>
